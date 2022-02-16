@@ -1,2 +1,2 @@
 # yyglManagement-webpack
-基于架手架搭建的后台管理项目
+基于react脚手架搭建的后台管理项目
