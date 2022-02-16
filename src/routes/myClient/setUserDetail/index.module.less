@@ -1,0 +1,41 @@
+.wrap {
+  .content {
+    border-bottom: 1px solid #e8e8e8;
+    .title {
+      font-size: 22px;
+      color: #000000;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    .items {
+      padding-left: 70px;
+      font-size: 14px;
+      margin-bottom: 28px;
+      letter-spacing: 0;
+      .required {
+        color: #ff0000;
+      }
+      .body {
+        margin-left: 20px;
+        color: #333333;
+      }
+    }
+  }
+  .password-content {
+    padding-top: 23px;
+    .title {
+      font-size: 22px;
+      color: #000000;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+:global {
+  .password {
+    .ant-form-item-label {
+      width: 25%;
+    }
+  }
+}

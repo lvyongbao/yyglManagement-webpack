@@ -1,0 +1,275 @@
+.layout {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  min-width: 1183px;
+  .header {
+    background: #ffffff;
+    padding: 0px 13px 0px 0px;
+    height: 54px;
+    line-height: 54px;
+    user-select: none;
+    .left {
+      color: #008cff;
+      font-weight: bolder;
+      img:first-child {
+        margin-right: 6px;
+      }
+    }
+    .headerIcon {
+      float: right;
+      img {
+        border-radius: 12.5px;
+      }
+    }
+    :global {
+      .ant-dropdown-link {
+        cursor: pointer;
+        line-height: 51px;
+        color: #212a3b;
+        div {
+          display: inline-block;
+          img {
+            vertical-align: top;
+            margin-top: 13px;
+            margin-right: 8px;
+            border-radius: 12.5px;
+          }
+          span {
+            font-size: 14px;
+            margin-right: 8px;
+          }
+        }
+      }
+      .companyDefault {
+        .ant-select-selection {
+          border: none;
+          box-shadow: none;
+          &:hover {
+            border-color: none;
+          }
+        }
+      }
+    }
+
+    .active.active {
+      color: rgba(0, 0, 0, 0.45);
+    }
+  }
+  .menu {
+    height: calc(~"100% - 54px");
+    // overflow: hidden;
+    .link {
+      // color: rgba(255, 255, 255, 0.45);
+      &.activeLink {
+        color: #ffffff;
+        display: block;
+        width: 100%;
+        background-color: #1890ff;
+      }
+    }
+    .link:hover {
+      color: #ffffff;
+    }
+  }
+  .title {
+    height: 54px;
+    color: #ffffff;
+    line-height: 54px;
+    // text-align: center;
+    overflow: hidden;
+    background: #002140;
+    .logo {
+      height: 54px;
+      img {
+        vertical-align: middle;
+        margin: 0 12px 0 32px;
+      }
+    }
+  }
+  .sider,
+  .sider-collapsed {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    user-select: none;
+    :global {
+      .ant-layout-sider .ant-layout-sider-light {
+        padding-top: 16px;
+      }
+      .ant-menu-inline,
+      .ant-menu-vertical,
+      .ant-menu-vertical-left {
+        border: 0;
+      }
+      .ant-menu-light,
+      .ant-menu-light .ant-menu-sub {
+        background-color: #ffffff;
+        box-shadow: none;
+      }
+      .ant-menu-light .ant-menu-item,
+      .ant-menu-light .ant-menu-submenu {
+        padding-left: 14px !important;
+        padding-right: 12px !important;
+        i {
+          color: #bfbfbf;
+        }
+      }
+      .ant-menu-light .ant-menu-item > a,
+      .ant-menu-light .ant-menu-submenu .ant-menu-submenu-title {
+        color: #000000;
+        padding-left: 6px !important;
+        font-size: 14px;
+      }
+      .ant-menu-light .ant-menu-submenu .ant-menu-submenu-title > i {
+        right: 45px;
+      }
+      .ant-menu-sub {
+        .ant-menu-item {
+          padding: 0px !important;
+          margin: 0px;
+          a {
+            padding-left: 30px !important;
+          }
+        }
+      }
+
+      // hover样式
+      .ant-menu-light .ant-menu-item-active {
+        a {
+          color: #008cff !important;
+          i {
+            color: #008cff !important;
+          }
+        }
+      }
+      .ant-menu-light .ant-menu-submenu-active {
+        .ant-menu-submenu-title {
+          color: #008cff !important;
+          i {
+            color: #008cff !important;
+          }
+        }
+      }
+
+      // selected样式
+      .ant-menu.ant-menu-light .ant-menu-item-selected,
+      .ant-menu-submenu-popup.ant-menu-light .ant-menu-item-selected {
+        background-color: #ffffff;
+      }
+      .ant-menu-light a.active {
+        background-color: rgba(0, 140, 255, 0.12);
+        color: #008cff;
+        i {
+          color: #008cff;
+        }
+      }
+      .ant-menu-light .ant-menu-submenu-selected {
+        .ant-menu-submenu-title {
+          color: #008cff !important;
+          i {
+            color: #008cff;
+          }
+          .ant-menu-submenu-arrow::before,
+          .ant-menu-submenu-arrow::after {
+            background-image: linear-gradient(to right, rgb(0, 140, 255), rgb(0, 140, 255));
+          }
+        }
+      }
+      .ant-menu-inline .ant-menu-selected::after,
+      .ant-menu-inline .ant-menu-item-selected::after {
+        display: none;
+        width: 0;
+      }
+    }
+  }
+
+  .sider-collapsed {
+    width: 60px;
+  }
+
+  .content,
+  .content-collapsed {
+    overflow: hidden;
+    height: 100vh;
+    .layout-main {
+      height: calc(100vh - 50px);
+      overflow: hidden;
+      .main {
+        width: 100%;
+        height: 100%;
+        padding: 0 24px 24px;
+        min-width: 1138px;
+        background: #f5f5f5;
+        overflow: auto;
+        position: relative;
+        .main-crumbs {
+          height: 36px;
+          line-height: 36px;
+          background: #f5f5f5;
+          display: flex;
+          align-items: center;
+        }
+        .main-crumbs-center {
+          float: right;
+          margin-right: 30px;
+          color: #1c87f3;
+          cursor: pointer;
+        }
+        :global {
+          .ant-breadcrumb > span {
+            color: rgba(0, 0, 0, 0.45);
+            font-size: 14px;
+          }
+          .main-tab {
+            background: #ffffff;
+            margin: 12px;
+            position: relative;
+            box-sizing: border-box;
+            height: 45px;
+            border-radius: 4px;
+            padding-left: 41px;
+            padding-right: 20px;
+            overflow: hidden;
+            user-select: none;
+            div {
+              float: left;
+              height: 45px;
+              line-height: 45px;
+              color: #000000;
+              font-size: 13px;
+              height: 100%;
+              margin-right: 50px;
+              cursor: pointer;
+            }
+            div:last-child {
+              margin-right: 0px;
+            }
+          }
+          .main-content {
+            background: #fff;
+            width: 100%;
+            padding: 24px;
+            position: relative;
+            min-height: calc(100% - 36px)
+          }
+          .main-content > div {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  .content-collapsed {
+    margin-left: 60px;
+  }
+}
+.actived {
+  border-bottom: 3px solid #008cff;
+}
+.error {
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+}

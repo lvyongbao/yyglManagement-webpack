@@ -1,0 +1,71 @@
+.line {
+  display: inline-block;
+  width: 1px;
+  height: 14px;
+  margin: 0 8px;
+  vertical-align: text-bottom;
+  background: rgb(232, 232, 232);
+}
+.addClient {
+  .formTitle {
+    display: flex;
+    text-align: right;
+    margin-right: 20px;
+    margin-bottom: 24px;
+  }
+  h4 {
+    font-size: 14px;
+    color: #444444;
+    margin: 0;
+    display: block;
+    flex: 0 0 33.33333333%;
+  }
+  .detailButton {
+    text-align: center;
+    margin-top: 24px;
+    .goBack {
+      margin-left: 8px;
+    }
+  }
+}
+
+
+:global {
+  .ant-form-item-control-input-content {
+    position: relative;
+  }
+  .ant-form-item-extra {
+    position: absolute;
+    top: 28px;
+    left: 130px;
+    width: 180px;
+    font-size: 14px;
+    color: rgba(0,0,0,0.45);
+  }
+
+  .LookDetail {
+    margin-top: 16px;
+    .m-textTitle {
+      font-size: 14px;
+      color: #444444 !important;
+      padding-right: 15px;
+    }
+    .m-textRt {
+      text-align: right;
+      font-size: 14px;
+      color: rgba(0,0,0,0.85);
+    }
+    .m-textLf {
+      text-align: left;
+      padding-left: 12px;
+      font-size: 14px;
+      color: rgba(0,0,0,0.65);
+    }
+    .m-textImg {
+      line-height: 100px;
+    }
+    .ant-row {
+      margin-bottom: 24px;
+    }
+  }
+}

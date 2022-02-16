@@ -1,0 +1,65 @@
+{
+  "id": "2739881",
+  "name": "藏宝阁",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "23625018",
+      "name": "删 除",
+      "font_class": "a-shanchu",
+      "unicode": "f22b",
+      "unicode_decimal": 61995
+    },
+    {
+      "icon_id": "23534741",
+      "name": "减去",
+      "font_class": "jianqu",
+      "unicode": "f22a",
+      "unicode_decimal": 61994
+    },
+    {
+      "icon_id": "23534724",
+      "name": "增加",
+      "font_class": "zengjia",
+      "unicode": "f226",
+      "unicode_decimal": 61990
+    },
+    {
+      "icon_id": "23534537",
+      "name": "添加",
+      "font_class": "tianjia",
+      "unicode": "f223",
+      "unicode_decimal": 61987
+    },
+    {
+      "icon_id": "23534514",
+      "name": "预览",
+      "font_class": "yulan",
+      "unicode": "f222",
+      "unicode_decimal": 61986
+    },
+    {
+      "icon_id": "23533845",
+      "name": "财务管理",
+      "font_class": "caiwuguanli",
+      "unicode": "f21d",
+      "unicode_decimal": 61981
+    },
+    {
+      "icon_id": "23533837",
+      "name": "我的资料",
+      "font_class": "wodeziliao",
+      "unicode": "f21c",
+      "unicode_decimal": 61980
+    },
+    {
+      "icon_id": "23533722",
+      "name": "我的首页",
+      "font_class": "wodekehu",
+      "unicode": "f213",
+      "unicode_decimal": 61971
+    }
+  ]
+}

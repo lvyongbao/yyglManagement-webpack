@@ -1,0 +1,164 @@
+// 放置对antd组件的样式更改，注意不要直接修改，需要加类名修饰
+
+:global {
+  //*步骤条*//
+  .ant-steps {
+    &.m-steps {
+      margin: 0 auto;
+
+      .ant-steps-item {
+        margin-right: 4px !important;
+
+        .ant-steps-item-icon {
+          display: none;
+        }
+        .ant-steps-item-title {
+          width: 130px;
+          height: 34px;
+          line-height: 32px;
+          padding: 0 0 !important;
+          border: 1px solid #a6a6a6;
+          border-radius: 4px;
+          text-align: center;
+          color: #a6a6a6;
+          &:after {
+            left: calc(~"100% + 4px");
+            top: 16px;
+            background: transparent !important;
+            border-bottom: 1px dashed #979797;
+          }
+        }
+        &.ant-steps-item-active {
+          .ant-steps-item-title {
+            border-color: @primary-color;
+            color: @primary-color;
+          }
+        }
+        &.ant-steps-item-finish {
+          .ant-steps-item-icon {
+            position: absolute;
+            left: 110px;
+            bottom: 0;
+            z-index: 1;
+            display: inline-block;
+            width: 0;
+            height: 0;
+            background: transparent;
+            border-radius: 0;
+            border-bottom-right-radius: 4px;
+            border: 10px solid transparent;
+            border-right: 10px solid #87e8de;
+            border-bottom: 10px solid #87e8de;
+
+            & > .ant-steps-icon {
+              position: static;
+            }
+            .anticon {
+              position: absolute;
+              left: -3px;
+              transform: scale(0.6);
+              color: #fff;
+            }
+          }
+          .ant-steps-item-title {
+            border-color: #36cfc9;
+            background: #36cfc9;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  //*menu菜单*//
+  .ant-menu-item,
+  .ant-menu-submenu-title {
+    transition: none !important;
+    height: 52px !important;
+    line-height: 52px !important;
+  }
+
+  //*表格样式修改*//
+  .ant-table-wrapper {
+    .ant-table-tbody {
+      color: rgba(0, 0, 0, 0.64);
+    }
+    .ant-table-thead > tr > th {
+      background: #f5f5f5;
+    }
+  }
+  .tableCol {
+    .ant-table {
+      font-size: 13px;
+    }
+  }
+
+  //*treeSelect 样式修改*//
+  // .ant-select-dropdown {
+  //   max-height: 300px !important;
+  //   overflow: auto !important;
+  // }
+
+  //*分页样式*//
+  // .ant-pagination {
+  //   display: flex;
+  //   color: #323232;
+  //   .ant-pagination-total-text {
+  //     order: 1;
+  //     margin-left: 8px;
+  //   }
+  //   .ant-pagination-options {
+  //     order: 2;
+  //     margin-left: 10px;
+  //     .ant-pagination-options-size-changer.ant-select {
+  //       margin-right: 0px;
+  //       margin-top: 0px;
+  //     }
+  //   }
+  //   .ant-pagination-item {
+  //     a {
+  //       color: #323232;
+  //     }
+  //   }
+  //   .ant-select {
+  //     color: #323232;
+  //   }
+  // }
+
+  //*modal样式修改*//
+  .ant-modal-content {
+    // border-radius: 0px;
+    // background-clip: border-box;
+    // border: 1px solid #e2e2e2;
+    // .ant-modal-close {
+    //   .ant-modal-close-x {
+    //     line-height: 82px;
+    //     height: 82px;
+    //     width: 82px;
+    //   }
+    // }
+    // .ant-modal-header {
+    //   padding: 10px 24px;
+    //   border-radius: 0px;
+    //   height: 42px;
+    //   border-bottom-color: #e2e2e2;
+    // }
+    .ant-modal-body {
+      // padding: 20px 20px 13px;
+      // overflow: auto;
+      .ant-modal-confirm-btns {
+        .ant-btn-primary {
+          float: left;
+          margin-left: 0px;
+          margin-right: 8px;
+        }
+      }
+    }
+    // .ant-modal-footer {
+    //   border-top-color: #e2e2e2;
+    //   button {
+    //     line-height: 30px;
+    //   }
+    // }
+  }
+}

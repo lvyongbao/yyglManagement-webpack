@@ -1,0 +1,116 @@
+// 公共的类型样式，统一调整
+
+//公共modal类名样式
+.allConfirm {
+  .ant-modal-content .ant-modal-body {
+  }
+}
+.otherConfirm {
+  .ant-modal-content .ant-modal-body {
+    .ant-modal-confirm-btns {
+      button:first-child {
+        display: none;
+      }
+      button {
+        margin: 0px;
+      }
+    }
+  }
+}
+
+//公共搜索框类名样式
+.searchform {
+  margin-bottom: 24px;
+  margin-bottom: 12px;
+  .ant-form {
+    .ant-form-item {
+      margin-bottom: 12px !important;
+    }
+    .ant-select,
+    .ant-picker,
+    .ant-input {
+      margin-top: 0px;
+      width: 222px !important;
+    }
+  }
+}
+
+// 公共搜索框下操作按钮类名样式
+.addOpr {
+  margin-bottom: 24px;
+}
+
+// 公共列表类名样式
+.tableList {
+  width: 100%;
+  margin-bottom: 16px;
+  // margin-bottom: 51px;
+  overflow: hidden;
+  .listOpr {
+    a {
+      display: inline-block;
+      padding: 0px 8px;
+      vertical-align: middle;
+    }
+    a:first-child {
+      padding-left: 0px;
+    }
+    a:last-child {
+      padding-right: 0px;
+    }
+    a:after {
+      content: "";
+      display: inline-block;
+      position: relative;
+      right: -8px;
+      height: 14px;
+      background: #e8e8e8;
+      width: 1px;
+      vertical-align: middle;
+      margin-top: -3px;
+    }
+    a:last-child:after {
+      display: none;
+    }
+  }
+}
+
+//公共分页器类名样式
+.pager {
+  // position: absolute;
+  // bottom: 24px;
+  // width: calc(100% - 48px);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  .left {
+    height: 35px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    div {
+      color: rgba(0, 0, 0, 0.85);
+      margin-right: 20px;
+    }
+    .m-footerLine {
+      margin-right: 20px;
+      color: #e2e2e2;
+    }
+    button {
+      margin-right: 12px;
+    }
+  }
+  .right {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+}
+
+//公共详情类名样式
+.formDetail {
+  max-width: 1026px;
+  margin: 0 auto;
+}
