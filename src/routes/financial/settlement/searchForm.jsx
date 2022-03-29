@@ -10,19 +10,20 @@ const { Option } = Select;
 
 const propTypes = {
   settlement: PropTypes.objectOf(PropTypes.any).isRequired,
-  // getAllCompanyList: PropTypes.arrayOf(PropTypes.any).isRequired,
+  getAllCompanyList: PropTypes.arrayOf(PropTypes.any).isRequired,
   onSearch: PropTypes.func.isRequired,
   onReset: PropTypes.func.isRequired,
 };
 function SearchForm({
-  settlement, getAllCompanyList, onSearch, onReset,
+  settlement, base, onSearch, onReset,
 }) {
   const { allProductList, settlementSearchData } = settlement;
   const { customerQuickSearch, productId, serviceIds } = settlementSearchData;
 
   const [form] = Form.useForm();
   const { setFieldsValue } = form;
-
+  const { getAllCompanyList } = base;
+  
   // 首次进入
   useEffect(() => {
     setFieldsValue({
@@ -37,7 +38,7 @@ function SearchForm({
     treeData: getAllCompanyList,
     treeCheckable: true,
     showCheckedStrategy: SHOW_PARENT,
-    treeDefaultExpandedKeys: ['F7A545749898009511926'],
+    treeDefaultExpandedKeys: ['DB123456789'],
     placeholder: '请选择',
     showSearch: false,
     style: {
@@ -79,6 +80,7 @@ function SearchForm({
   );
 }
 SearchForm.propTypes = propTypes;
-export default connect(({ settlement }) => ({
+export default connect(({ settlement,base }) => ({
   settlement,
+  base
 }))(SearchForm);

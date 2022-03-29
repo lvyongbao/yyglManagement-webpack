@@ -1,5 +1,5 @@
 import { message } from 'antd';
-import { modelExtend, getServices } from '../../../utils';
+import { modelExtend, getServices } from '@utils';
 
 const services = getServices({
   setName: {

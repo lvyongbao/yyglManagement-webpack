@@ -7,7 +7,7 @@ import moment from 'moment';
 import { cloneDeep } from 'lodash';
 import Style from './index.module.less';
 import SearchForm from './searchForm';
-import columns from './data';
+import { columns } from './data';
 
 const propTypes = {
   settlement: PropTypes.objectOf(PropTypes.any).isRequired,
@@ -16,10 +16,9 @@ const propTypes = {
 };
 const namespace = 'settlement';
 function Settlement(props) {
-  const { settlement, loading, base } = props;
+  const { settlement, loading } = props;
   const { dispatchAction, getLoading } = getBasicFn({ namespace, loading });
   const { settlementTable, settlementSearchData, settlementPagination } = settlement;
-  const { userAuth } = base;
 
   // 搜索条件
   const searchProps = {
@@ -64,7 +63,7 @@ function Settlement(props) {
   // 表格参数
   const tableProps = {
     rowKey: 'guid',
-    columns,
+    columns:columns(),
     dataSource: settlementTable,
     pagination: false,
     loading: getLoading('getTable'),
@@ -118,8 +117,7 @@ function Settlement(props) {
 }
 
 Settlement.propTypes = propTypes;
-export default connect(({ settlement, loading, base }) => ({
+export default connect(({ settlement, loading }) => ({
   settlement,
   loading,
-  base,
 }))(Settlement);
